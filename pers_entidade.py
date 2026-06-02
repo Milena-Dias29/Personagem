@@ -3,13 +3,15 @@ from entidade import Entidade
 class Pers_entidade(Entidade):
 
     def tomar_dano(self, valor):
-        if self.vida >= valor:
-            self.morrer
+        self.vida -= valor
+        print(f"{self.nome} tomou {valor} de dano!")
+        if self.vida <= 0:
+            self.morrer()
 
-        return self.vida -= valor
+        self.vida -= valor
 
     def atacar(self, habilidade):
-        print(f"{Entidade} possui habilidade de ")
+        print(f"{self.nome} usou a habilidade {habilidade}!")
 
     def curar(self,valor):
         if valor >= self.max_vida:
@@ -17,8 +19,8 @@ class Pers_entidade(Entidade):
         else:
             self.vida = valor
 
+    def morrer(self):
+        print(f"{self.nome} morreu!")
 
-
-
-
-            
+    def usar_habilidade(self,habilidade):
+        print(f"{self.nome} possui essas habilidades: {habilidade}")

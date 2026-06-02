@@ -59,9 +59,4 @@ class personagem:
     def __str__(self):  
         return f"{self.nome}, a/o personagem é nivel {self.nivel}, possui habilidade/s {self.habilidade},{"ta em uma guilda" if self.guilda==True else "não esta em uma guilda"}"
     
-Hylda = personagem("Hylda", 1, ["criar objetos","desaparecer","vento"])
-Hylda.salvar_dados()
-Hylda.carregar_dados()
-print(Hylda)
-Hylda.usar_habilidade()
-Hylda.subir_nivel(1)
+v
