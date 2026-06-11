@@ -3,7 +3,7 @@ import json
 import random
 
 class inimigo:
-    def __init__(self, nome, nivel, habilidade=none):
+    def __init__(self, nome, nivel, habilidade=None):
         self.nome = nome
         self.nivel = nivel
         self.habilidade = habilidade
@@ -33,7 +33,7 @@ class inimigo:
     def __str__(self):
         return(f"{self.nome}, é um inimigo nivel {self.nivel}, que possui as habilidades {self.habilidade}")
 
-Mox = personagem("Mox", 1, ["criar objetos","desaparecer","vento"])
+Mox = inimigo("Mox", 1, ["criar objetos","desaparecer","vento"])
 Mox.salvar_dados()
 Mox.carregar_dados()
 print(Mox)
